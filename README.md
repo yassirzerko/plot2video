@@ -46,7 +46,7 @@ To use the script, follow these steps:
 3. **Run the Script**: Execute the script with the following command:
 
    ```bash
-   python script.py --illustration_style <style> --work_folder_path <path> --overall_plot <description> --output_file_name <filename>
+   python script.py --illustration_style <style> --work_folder_path <path> --plot <description> --output_file_name <filename>
    ```
 
 ### Required Arguments:
@@ -65,7 +65,7 @@ To use the script, follow these steps:
 ### Example:
 
 ```bash
-python script.py --illustration_style cartoon --work_folder_path /path/to/folder --overall_plot "A gripping tale of adventure" --geo_time_setting "Medieval Europe" --additional_keywords fantasy --content_restrictions "PG-13" --output_file_name output.txt
+python script.py --illustration_style cartoon --work_folder_path /path/to/folder --plot "A gripping tale of adventure" --geo_time_setting "Medieval Europe" --additional_keywords fantasy --content_restrictions "PG-13" --output_file_name output.txt
 ```
 
 This command will execute the script with the provided parameters, generating the output file with the specified name.
