@@ -1,6 +1,6 @@
 # plot2Video
 
-A Python script that leverages OpenAI's API to generate stories and transform them into videos with only one command line.
+A Python script that leverages OpenAI's API to generate a story and transform it into a video with only one command line.
 
 ## Overview
 The project uses 5 **GPT-4** workers, each with a specific role and task. The GPT workers simulate an **editorial line** by performing tasks such as separating story in semantic segments, creating approriate and consistent visual descriptions, and assigning voices based on the current speaker. This ensures that the generated content is coherent and visually appealing.
