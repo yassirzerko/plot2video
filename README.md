@@ -22,7 +22,7 @@ Below is a table summarizing the roles, tasks, inputs, and outputs of all the mo
 | Image generator         | dall-e-3     | Generates an image based on the given prompt                                                                                                                                                                                                                                                                 | DALL-E prompt                                                                         | generated image url                                                                                                                                                                                                                    |
 | Speech generator        | tts-1        | Creates an audio speech from a text input and a voice                                                                                                                                                                                                                                                        |  Voice <br>  Text                                                                     | mp3 file                                                                                                                                                                                                                             |
 ### Pipeline 
-![Diagram Description](./pipeline-diagram.png)
+![Diagram Description](./.pipeline-diagram.png)
 ## Usage
 
  You need to have the following :
@@ -50,26 +50,34 @@ To use the script, follow these steps:
 3. **Run the Script**: Execute the script with the following command:
 
    ```bash
-   python script.py --illustration_style <style> --work_folder_path <path> --plot <description> --output_file_name <filename>
+   python3 -m generate_video_story [-h] --illustration_style ILLUSTRATION_STYLE --plot PLOT
+                               [--geo_time_setting GEO_TIME_SETTING]
+                               [--additional_keywords ADDITIONAL_KEYWORDS]
+                               [--content_restrictions CONTENT_RESTRICTIONS]
+                               --output_file_name OUTPUT_FILE_NAME
+
+   A Python script that leverages OpenAI API to generate a story and transform it into a
+   video with only one command line
+
+   optional arguments:
+   -h, --help            show this help message and exit
+   --illustration_style ILLUSTRATION_STYLE
+                           The style of the illustrations (e.g., anime, realistic, cartoon)
+   --plot PLOT           A short description of the story
+   --geo_time_setting GEO_TIME_SETTING
+                           The geographical and temporal setting of the story (optional)
+   --additional_keywords ADDITIONAL_KEYWORDS
+                           Additional keywords for the story (optional)
+   --content_restrictions CONTENT_RESTRICTIONS
+                           Any content restrictions (optional)
+   --output_file_name OUTPUT_FILE_NAME
+                           The name of the output file
    ```
-
-### Required Arguments:
-
-- `--illustration_style`: The style of the illustrations (e.g., anime, realistic).
-- `--work_folder_path`: The folder where temporary work is done and the output is saved.
-- `--plot`: A short description of the story.
-- `--output_file_name`: The name of the output file.
-
-### Optional Arguments:
-
-- `--geo_time_setting`: The geographical and temporal setting of the story.
-- `--additional_keywords`: Additional keywords for the story.
-- `--content_restrictions`: Any content restrictions.
 
 ### Example:
 
 ```bash
-python script.py --illustration_style cartoon --work_folder_path /path/to/folder --plot "A gripping tale of adventure" --geo_time_setting "Medieval Europe" --additional_keywords fantasy --content_restrictions "PG-13" --output_file_name output.txt
+python3 -m generate_video_story --illustration_style "cartoon" --plot "A gripping tale of adventure" --geo_time_setting "Medieval Europe" --additional_keywords "fantasy" --content_restrictions "PG-13" --output_file_name "output.mp4"
 ```
 
 This command will execute the script with the provided parameters, generating the output file with the specified name.

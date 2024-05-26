@@ -1,0 +1,6 @@
+venv
+/logging_output/*
+!/logging_output/.gitkeep
+/work_folder/*
+!/work_folder/.gitkeep
+**/__pycache__/
