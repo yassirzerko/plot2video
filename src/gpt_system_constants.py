@@ -35,6 +35,7 @@ class GPT_SYSTEM_COMMAND_PROMPTS :
     5. **Avoid Policy Violations:**
     - Ensure the prompt does not include any content that could be interpreted as violent, harmful, or otherwise inappropriate according to DALL-E's content policy.
     6. **No Text in Images and not additionnal characters**
+    7. If there are many characters in the segment try to include them all (only the one from the segment).
 
     - Ensure that the prompt does not include any instructions to generate text within the images. Do not include any unnecessary characters, such as newlines or special characters, in the output. Provide only plain text.
 
@@ -64,7 +65,8 @@ class GPT_SYSTEM_COMMAND_PROMPTS :
     Segment2: Corresponding part of the story (including voice annotations)
     Place: [Place where the segment takes place]
     Characters: [List of characters involved]
-    Remember, do not remove or alter any voice annotations. Ensure each segment can contain multiple voices if necessary.
+    IMPORTANT : Remember, do not remove or alter any voice annotations. Ensure each segment can contain multiple voices if necessary.
+    If a segment is about a place where the character is not really, you should include the place in the segments.
     """
 
     VISUAL_DESCRIPTIONS = (

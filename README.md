@@ -74,6 +74,7 @@ To use the script, follow these steps:
                            The name of the output file
    ```
 
+   **The output file will be located in `/work_folder`**
 ### Example:
 
 ```bash
@@ -84,12 +85,77 @@ This command will execute the script with the provided parameters, generating th
 
 ## Example of generated videos
 
-### Plot Two dog kingdoms fight for the good boy prize (Style cartoon)
+### Two dog kingdoms fight for the good boy prize (Style cartoon)
+
+Obtained with : 
+```bash
+python3 -m generate_video_story --illustration_style "cartoon" --plot "Two dog kingdoms fight for the good boy prize"
+```
+
 [![Watch the video](https://img.youtube.com/vi/sS4SgaWSegs/maxresdefault.jpg)](https://youtu.be/sS4SgaWSegs)
+
+
+
+### Cat Kingdom vs Dog Kingdom Competition for Best Pet
+
+Obtained with : 
+```bash
+python3 -m generate_video_story  --illustration_style "cartoon" --plot "Cat Kingdom vs Dog Kingdom Competition for Best Pet" 
+```
+
+[![Watch the video](https://img.youtube.com/vi/dyoK8szs8Ac/maxresdefault.jpg)](https://youtu.be/dyoK8szs8Ac)
+
+### In a manga-style story, two characters fight to be recognized as the best assassin
+
+Obtained with : 
+```bash
+python3 -m generate_video_story  ---illustration_style "manga" --plot "In manga style story, two characters fight to be recognized as the best assassin"
+```
+
+[![Watch the video](https://img.youtube.com/vi/mdoSDfg-3Xg/maxresdefault.jpg)](https://youtu.be/mdoSDfg-3Xg)
+
+### The story of a dog and a cat who are best friends
+
+Obtained with : 
+```bash
+python3 -m generate_video_story  --illustration_style "cartoon" --plot "The story of a dog and a cat who are best friends" 
+```
+
+[![Watch the video](https://img.youtube.com/vi/_BFjjSHOuUo/maxresdefault.jpg)](https://youtu.be/_BFjjSHOuUo)
+
+### Interaction between 3 policeman (a cat, a bird, a dog) in a boat
+
+Obtained with : 
+```bash
+python3 -m generate_video_story  --illustration_style "cartoon" --plot "Interaction between 3 policeman (a cat, a bird, a dog)" --geo_time_setting "Boat" 
+```
+
+[![Watch the video](https://img.youtube.com/vi/B8YuqrJNynA/maxresdefault.jpg)](https://youtu.be/B8YuqrJNynA)
+ 
+
+### Character shonnen cook dominates the world by feeding his enemies
+
+Obtained with : 
+```bash
+python3 -m generate_video_story --illustration_style "manga" --plot "Character shonnen cook dominates the world by feeding his enemies" 
+```
+
+[![Watch the video](https://img.youtube.com/vi/jkHLxaqSWhE/maxresdefault.jpg)](https://youtu.be/jkHLxaqSWhE )
+
+
 
 ## Disclaimers
 
 I am not responsible for the generated content and your usage of it. This project is for showcasing skills on a resume and as a hobby. It is not intended for business purposes.
+
+## Cost Consideration
+
+Please note that the OpenAI API is a paid service. The cost of generating a video using this script can vary, typically ranging from $0.30 to $1 per video. This cost depends on the complexity and length of the video being generated.
+
+## Important Note
+
+Please be aware that sometimes the script may fail. Achieving deterministic behavior from the GPT-prompter is challenging, even with extensive work on prompting and setting random variables to null. Despite efforts, occasional failures may occur due to the inherent nature of the AI model.
+
 
 
 

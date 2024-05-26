@@ -54,7 +54,7 @@ def generate_video_story(open_ai_api_key, plot, illustration_style, geo_time_set
         output_file_name="final_video.mp4"
     )
     """
-    
+
     tmp_folder_path = os.path.join('work_folder', "tmp_video_processing_output")
     os.makedirs(tmp_folder_path, exist_ok=True)
 
@@ -104,7 +104,7 @@ if __name__ == "__main__":
     --content_restrictions CONTENT_RESTRICTIONS
                             Any content restrictions (optional)
     --output_file_name OUTPUT_FILE_NAME
-                            The name of the output file
+                            The name of the output file (should en by .mp4)
     '''
 
     parser = argparse.ArgumentParser(description="A Python script that leverages OpenAI's API to generate a story and transform it into a video with only one command line")
@@ -123,6 +123,10 @@ if __name__ == "__main__":
         print('No OpenAI API KEY found.')
         exit(1)
     
+    if not args.output_file_name.lower().endswith('.mp4') :
+        print('Output file name should end with .mp4 ')
+        exit(1)
+
     try : 
         generate_video_story(openai_key, args.plot, args.illustration_style, args.geo_time_setting, args.additional_keywords, args.content_restrictions, args.output_file_name)
     except Exception as e : 

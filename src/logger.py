@@ -61,7 +61,6 @@ def log_function_call(logger):
             # Log function output
             logger.info(f"Output: {result} \n")
 
-
             return result
         return wrapper
     return decorator

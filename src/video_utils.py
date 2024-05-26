@@ -24,7 +24,7 @@ def merge_image_audio(image_path, audio_paths, output_folder):
     
     total_duration = sum(AudioFileClip(path).duration for path in audio_paths)
     
-    img = img.set_duration(total_duration)
+    img = img.set_duration(total_duration + 1)
     
     audio_clips = []
     
